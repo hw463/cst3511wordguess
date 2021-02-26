@@ -1,0 +1,11 @@
+television
+smartphone
+laptop
+tablet
+camera
+headphones
+drone
+printer
+router
+speakers
+console
