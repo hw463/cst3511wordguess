@@ -28,7 +28,7 @@ public final class GameFunctions {
 }
     
     public void playGame(String chosenWord){
-        
+   
         Scanner keyboardInput = new Scanner(System.in);
         
 //        String guess = "";
