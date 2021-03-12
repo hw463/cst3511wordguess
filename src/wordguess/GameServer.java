@@ -77,10 +77,10 @@ public class GameServer implements AppProtocol {
             // Gameplay logic
             while (gameCount < 4) {
 
-                //If the gameCount is even the Player 1 chooses category
+                //If gameCount is even the Player 1 chooses category
                 if (gameCount % 2 == 0) {
                     
-                    System.out.println("----------------"
+                    System.out.println("------------------------"
                             + "\nRound " + (gameCount+1) + " out of 4");
 
                     // Player 1 selects the category
@@ -118,7 +118,7 @@ public class GameServer implements AppProtocol {
                     System.out.println("Player 2 points count: " + gameServer.player2count);
                     gameCount++;
                 
-                // If the gameCount is odd the Player 2 chooses category
+                // If gameCount is odd the Player 2 chooses category
                 } else {
 
                     System.out.println("------------------------"
@@ -170,15 +170,15 @@ public class GameServer implements AppProtocol {
             if (gameServer.player1count > gameServer.player2count) {
                 toPlayer1.println(PLAYER1WINS);
                 toPlayer2.println(PLAYER1WINS);
-                System.out.println("Player 1 wins. Game finished.");
+                System.out.println("Player 1 wins. Game finished.\n");
             } else if (gameServer.player1count < gameServer.player2count) {
                 toPlayer1.println(PLAYER2WINS);
                 toPlayer2.println(PLAYER2WINS);
-                System.out.println("Player 2 wins. Game finished.");
+                System.out.println("Player 2 wins. Game finished.\n");
             } else {
                 toPlayer1.println(DRAW);
                 toPlayer2.println(DRAW);
-                System.out.println("It's a draw. Game finished.");
+                System.out.println("It's a draw. Game finished.\n");
             }
 
         } catch (IOException ex) {
