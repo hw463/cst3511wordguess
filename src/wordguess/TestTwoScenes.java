@@ -15,7 +15,7 @@ import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
-public class twoScenesExample extends Application {
+public class TestTwoScenes extends Application {
 
 Scene scene1, scene2;
     

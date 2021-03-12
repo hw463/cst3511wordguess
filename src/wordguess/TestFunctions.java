@@ -14,12 +14,12 @@ import java.util.Scanner;
  *
  * @author hubert.wolfram
  */
-public final class GameFunctions {
+public final class TestFunctions {
     
     String [] sArray;
     String word;
     
-    public GameFunctions() throws IOException {
+    public TestFunctions() throws IOException {
         
     }
     

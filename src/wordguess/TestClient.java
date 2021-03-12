@@ -5,15 +5,16 @@
  */
 package wordguess;
 
+import java.io.IOException;
 import java.util.Scanner;
 
 /**
  *
  * @author hubert.wolfram
  */
-public class WordGuess {
+public class TestClient {
 
-    static GameFunctions game;    
+    static TestFunctions game;    
     
     public static void main(String[] args) {
         
@@ -23,7 +24,7 @@ public class WordGuess {
             
             try{
             
-                game = new GameFunctions();
+                game = new TestFunctions();
     
                 Scanner keyboardInput = new Scanner(System.in);
         
@@ -61,7 +62,7 @@ public class WordGuess {
 
                 gameCount++;
 
-                }catch(Exception ex){
+                }catch(IOException ex){
                     System.out.println(ex);
                 }
 	
