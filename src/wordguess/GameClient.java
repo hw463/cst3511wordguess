@@ -17,7 +17,6 @@ public class GameClient implements AppProtocol {
 
     Scanner fromServer;
     PrintWriter toServer;
-    String host = "localhost";
     String guess;
     int gameCount = 0;
     int guessCount = 0;
@@ -31,7 +30,7 @@ public class GameClient implements AppProtocol {
 
         try {
             // Create a socket to connect to the server
-            Socket socket = new Socket(host, 3000);
+            Socket socket = new Socket(HOST, PORT);
 
             // Create a Scanner to receive data from the server
             fromServer = new Scanner(socket.getInputStream());

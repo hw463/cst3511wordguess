@@ -38,7 +38,7 @@ public class GameServer implements AppProtocol {
 
         try {
             // Create a server socket
-            ServerSocket serverSocket = new ServerSocket(3000);
+            ServerSocket serverSocket = new ServerSocket(PORT);
             System.out.println("\n" + new Date() + ": Server started at socket 3000\n");
 
             // Ready to create a session for two players
