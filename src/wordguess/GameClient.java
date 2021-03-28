@@ -26,6 +26,7 @@ public class GameClient implements AppProtocol {
     String chosenCat;
     boolean outOfGuesses = false;
 
+    // A method which connects client to server and starts the game
     private void connectToServer() {
 
         try {
@@ -45,6 +46,7 @@ public class GameClient implements AppProtocol {
         GamePlay();
     }
 
+    // A method containing the game logic
     private void GamePlay() {
 
         Scanner keyboardInput = new Scanner(System.in);
@@ -101,9 +103,6 @@ public class GameClient implements AppProtocol {
                 
                 System.out.println("\nThis word has " + randomWord.length() + " letters.");
                 
-                // Console output for output check and game troubleshooting
-                // System.out.println("The word is " + randomWord);
-                
                 System.out.print("\nEnter a guess: ");
                 guess = keyboardInput.nextLine();
                 toServer.println(guess);
@@ -146,9 +145,6 @@ public class GameClient implements AppProtocol {
                 String randomWord = fromServer.nextLine();
 
                 System.out.println("\nThis word has " + randomWord.length() + " letters.");
-                
-                // Console output for output check and game troubleshooting
-//                System.out.println("The word is " + randomWord);
                 
                 System.out.print("\nEnter a guess: ");
                 guess = keyboardInput.nextLine();
@@ -198,6 +194,7 @@ public class GameClient implements AppProtocol {
 
     }
 
+    // A method to retrieve from server a random word to be guesssed
     private String getWord(String chosenCat) {
         toServer.println(chosenCat);
         toServer.flush();

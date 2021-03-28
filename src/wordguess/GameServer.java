@@ -39,10 +39,9 @@ public class GameServer implements AppProtocol {
         try {
             // Create a server socket
             ServerSocket serverSocket = new ServerSocket(PORT);
-            System.out.println("\n" + new Date() + ": Server started at socket 3000\n");
+            System.out.println("\n" + new Date() + ": Server started at socket "+ PORT +"\n");
 
             // Ready to create a session for two players
-//            while (true) {
             System.out.println(new Date() + ": Waiting for players to join the game \n");
 
             // Connect to player 1
@@ -186,12 +185,12 @@ public class GameServer implements AppProtocol {
         }
     }
 
-    // Method for checking whether the guess matches the chosen Word
+    // Method for checking whether the guess matches the chosen word
     public boolean checkWord(String toCheck) {
         return (toCheck == null ? guessWord == null : toCheck.equals(guessWord));
     }
 
-    // Method to select a random guessWord to guess from a text file
+    // Method to select from a text file a random word to be guessed
     public String chooseWord(String file) {
 
         String sourceFile;
